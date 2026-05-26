@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Parvat Paigaam (पर्वत पैगाम) — उत्तराखंड की आवाज़ | Tehri Garhwal Hindi News</title>
+<meta name="description" content="Parvat Paigaam (पर्वत पैगाम) - उत्तराखंड की आवाज़. Latest Hindi news from Uttarakhand, Tehri Garhwal, Mandar. Politics, Education, Jobs, Tourism, Village stories & Breaking News." />
+<meta name="keywords" content="Uttarakhand News, Tehri Garhwal News, Hindi News, Mandar News, Garhwal Samachar, Uttarakhand Breaking News, Parvat Paigaam, पर्वत पैगाम" />
+<meta name="author" content="Gaurav Rawat" />
+<link rel="canonical" href="/" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Parvat Paigaam — उत्तराखंड की आवाज़" />
+<meta property="og:description" content="उत्तराखंड की हर खबर सबसे पहले — Tehri Garhwal, Mandar & Garhwal Hindi News Portal." />
+<meta property="og:site_name" content="Parvat Paigaam" />
+<meta property="og:url" content="/" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Parvat Paigaam — उत्तराखंड की आवाज़" />
+<meta name="twitter:description" content="उत्तराखंड की हर खबर सबसे पहले." />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          brand: { DEFAULT:'#0f7a35', dark:'#064420', light:'#16a34a', accent:'#facc15' }
+        },
+        fontFamily: {
+          hindi: ['"Tiro Devanagari Hindi"', 'serif'],
+          sans: ['Poppins','sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{
+    --brand:#0f7a35; --brand-dark:#064420; --accent:#facc15;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;background:#f7faf7;color:#0b1d12;overflow-x:hidden}
+  body.dark{background:#04110a;color:#e6f5ea}
+  .glass{background:rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.22)}
+  .dark .glass{background:rgba(8,30,18,.45);border-color:rgba(255,255,255,.08)}
+  .glow{box-shadow:0 0 28px rgba(34,197,94,.45)}
+  .text-gradient{background:linear-gradient(90deg,#facc15,#22c55e,#34d399);-webkit-background-clip:text;background-clip:text;color:transparent}
+  /* Loader */
+  #loader{position:fixed;inset:0;background:radial-gradient(circle at 50% 60%,#0b3d22 0%,#02110a 80%);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .8s ease}
+  #loader.hide{opacity:0;pointer-events:none}
+  .pulse-sun{filter:drop-shadow(0 0 30px #facc15);animation:pulseSun 2s ease-in-out infinite}
+  @keyframes pulseSun{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.08);opacity:1}}
+  /* Hero scene */
+  .hero{position:relative;height:100vh;min-height:640px;overflow:hidden;background:linear-gradient(180deg,#0a1f3a 0%,#173b5a 35%,#e89b5a 75%,#fcd9a0 100%)}
+  .dark .hero{background:linear-gradient(180deg,#02060f 0%,#06182b 45%,#5a2d18 90%,#1a0f08 100%)}
+  .stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 50% 10%,#fff,transparent),radial-gradient(1.5px 1.5px at 80% 25%,#fff,transparent),radial-gradient(1px 1px at 30% 60%,#fff,transparent),radial-gradient(1px 1px at 70% 50%,#fff,transparent);opacity:.7;animation:twinkle 4s infinite alternate}
+  @keyframes twinkle{from{opacity:.3}to{opacity:.9}}
+  .sun{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,#fff7c2 0%,#facc15 40%,rgba(250,204,21,0) 70%);filter:blur(2px);animation:sunRise 6s ease-in-out infinite alternate}
+  @keyframes sunRise{from{top:42%}to{top:34%}}
+  .rays{position:absolute;left:50%;top:38%;width:600px;height:600px;transform:translate(-50%,-50%);background:conic-gradient(from 0deg,rgba(250,204,21,.0) 0deg,rgba(250,204,21,.18) 20deg,transparent 40deg,rgba(250,204,21,.15) 80deg,transparent 100deg,rgba(250,204,21,.18) 160deg,transparent 200deg,rgba(250,204,21,.12) 240deg,transparent 280deg,rgba(250,204,21,.16) 320deg,transparent 360deg);animation:spin 60s linear infinite;mix-blend-mode:screen;opacity:.6}
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+  .cloud{position:absolute;background:rgba(255,255,255,.6);border-radius:100px;filter:blur(8px);opacity:.7;animation:drift linear infinite}
+  .dark .cloud{background:rgba(180,200,220,.18)}
+  @keyframes drift{from{transform:translateX(-20vw)}to{transform:translateX(120vw)}}
+  .fog{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.5));pointer-events:none}
+  .dark .fog{background:linear-gradient(180deg,transparent,rgba(10,20,15,.7))}
+  .mountain{position:absolute;left:0;right:0;bottom:0;width:100%}
+  .layer{transition:transform .3s ease-out}
+  .particle{position:absolute;width:4px;height:4px;background:#facc15;border-radius:50%;opacity:.7;animation:float 8s ease-in-out infinite;filter:drop-shadow(0 0 6px #facc15)}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+  .bird{position:absolute;font-size:18px;color:#1a1a1a;opacity:.7;animation:fly 22s linear infinite}
+  .dark .bird{color:#e6f5ea}
+  @keyframes fly{from{transform:translate(-10vw,0)}to{transform:translate(110vw,-40px)}}
+  /* Ticker */
+  .live-dot{width:10px;height:10px;background:#ef4444;border-radius:50%;animation:blink 1s infinite}
+  @keyframes blink{50%{opacity:.2}}
+  /* Card hover */
+  .news-card{transition:transform .4s ease, box-shadow .4s ease}
+  .news-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -10px rgba(15,122,53,.35)}
+  .news-card img{transition:transform .6s ease}
+  .news-card:hover img{transform:scale(1.08)}
+  /* Scrollbar */
+  ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:#0f7a35;border-radius:8px}
+  /* Floating btn */
+  .float-btn{position:fixed;z-index:60;border-radius:9999px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+  /* Mobile bottom nav */
+  .mob-nav a{display:flex;flex-direction:column;align-items:center;font-size:11px;color:#0f7a35}
+  .dark .mob-nav a{color:#86efac}
+  /* Modal */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
+  .modal.show{display:flex;animation:fadeIn .3s ease}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .modal-box{background:#fff;border-radius:1rem;max-width:780px;width:100%;max-height:92vh;overflow:auto}
+  .dark .modal-box{background:#0b1d12;color:#e6f5ea}
+  input,select,textarea{outline:none}
+  .btn{padding:.6rem 1.1rem;border-radius:.6rem;font-weight:600;transition:.25s;display:inline-flex;align-items:center;gap:.5rem}
+  .btn-primary{background:linear-gradient(135deg,#0f7a35,#064420);color:#fff}
+  .btn-primary:hover{box-shadow:0 0 24px rgba(34,197,94,.6)}
+  .btn-accent{background:#facc15;color:#064420}
+  .btn-ghost{background:rgba(255,255,255,.1);color:inherit;border:1px solid rgba(255,255,255,.2)}
+  .badge{display:inline-block;padding:.2rem .6rem;border-radius:9999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .nav-link{position:relative;padding:.4rem .2rem}
+  .nav-link::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#facc15;transition:.3s}
+  .nav-link:hover::after{width:100%}
+  .ai-glow{position:relative}
+  .ai-glow::before{content:"";position:absolute;inset:-2px;border-radius:inherit;background:linear-gradient(120deg,#facc15,#22c55e,#06b6d4,#facc15);background-size:300% 300%;animation:aiGlow 6s linear infinite;z-index:-1;filter:blur(8px);opacity:.55}
+  @keyframes aiGlow{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+  .count-up{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body class="font-sans">
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="text-center">
+    <svg viewBox="0 0 200 120" width="220" height="140" class="mx-auto">
+      <circle cx="100" cy="55" r="22" fill="#facc15" class="pulse-sun"/>
+      <polygon points="0,120 50,55 90,90 130,40 180,90 200,70 200,120" fill="#0f7a35"/>
+      <polygon points="0,120 40,80 80,110 120,70 170,105 200,90 200,120" fill="#064420"/>
+    </svg>
+    <h1 class="mt-4 text-3xl font-bold text-gradient">पर्वत पैगाम</h1>
+    <p class="text-green-200 text-sm mt-1 tracking-widest">उत्तराखंड की आवाज़</p>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all">
+  <div class="glass">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand to-brand-dark grid place-items-center glow">
+          <i class="fa-solid fa-mountain-sun text-yellow-300"></i>
+        </div>
+        <div class="leading-tight">
+          <div class="font-extrabold text-lg text-gradient" data-i18n="brand">Parvat Paigaam</div>
+          <div class="text-[11px] tracking-widest opacity-80 font-hindi">पर्वत पैगाम • उत्तराखंड की आवाज़</div>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold">
+        <a class="nav-link" href="#home" data-i18n="nav_home">Home</a>
+        <a class="nav-link" href="#uttarakhand" data-i18n="nav_uk">Uttarakhand</a>
+        <a class="nav-link" href="#tehri" data-i18n="nav_tehri">Tehri Garhwal</a>
+        <a class="nav-link" href="#news" data-i18n="nav_politics">Politics</a>
+        <a class="nav-link" href="#news" data-i18n="nav_edu">Education</a>
+        <a class="nav-link" href="#news" data-i18n="nav_jobs">Jobs</a>
+        <a class="nav-link" href="#news" data-i18n="nav_tour">Tourism</a>
+        <a class="nav-link" href="#videos" data-i18n="nav_videos">Videos</a>
+        <a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <select id="langSel" class="hidden md:block bg-transparent border border-white/30 rounded-md text-xs px-2 py-1 cursor-pointer">
+          <option value="hi">हिंदी</option><option value="en">English</option>
+          <option value="te">తెలుగు</option><option value="pa">ਪੰਜਾਬੀ</option>
+        </select>
+        <button onclick="openSearch()" class="w-9 h-9 grid place-items-center rounded-full glass" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="w-9 h-9 grid place-items-center rounded-full glass relative" title="Notifications">
+          <i class="fa-solid fa-bell"></i><span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 grid place-items-center">3</span>
+        </button>
+        <button onclick="toggleDark()" class="w-9 h-9 grid place-items-center rounded-full glass" title="Dark"><i id="darkIcon" class="fa-solid fa-moon"></i></button>
+        <button onclick="openSettings()" class="w-9 h-9 grid place-items-center rounded-full glass" title="Settings"><i class="fa-solid fa-gear"></i></button>
+        <button onclick="toggleDrawer()" class="lg:hidden w-9 h-9 grid place-items-center rounded-full glass"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Breaking ticker -->
+  <div class="bg-gradient-to-r from-brand-dark via-brand to-brand-dark text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center gap-3">
+      <span class="flex items-center gap-2 bg-red-600 px-2 py-0.5 rounded-md text-xs font-bold"><span class="live-dot"></span> LIVE</span>
+      <div class="overflow-hidden flex-1">
+        <div id="ticker" class="whitespace-nowrap animate-[ticker_28s_linear_infinite] font-hindi">
+          • Tehri में भारी बारिश का अलर्ट &nbsp;&nbsp; • उत्तराखंड पर्यटन में रिकॉर्ड बढ़ोतरी &nbsp;&nbsp; • सरकारी नौकरियों की नई भर्ती जारी &nbsp;&nbsp; • गढ़वाल में नई सड़क परियोजना शुरू &nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<style>@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
+
+<!-- MOBILE DRAWER -->
+<div id="drawer" class="fixed inset-y-0 right-0 w-72 bg-brand-dark text-white p-6 z-[70] translate-x-full transition-transform">
+  <div class="flex justify-between items-center mb-6">
+    <span class="font-bold text-gradient text-lg">Menu</span>
+    <button onclick="toggleDrawer()"><i class="fa-solid fa-xmark text-xl"></i></button>
+  </div>
+  <nav class="flex flex-col gap-3 text-base">
+    <a href="#home" onclick="toggleDrawer()">🏠 Home</a>
+    <a href="#uttarakhand" onclick="toggleDrawer()">🏔️ Uttarakhand</a>
+    <a href="#tehri" onclick="toggleDrawer()">⛰️ Tehri Garhwal</a>
+    <a href="#news" onclick="toggleDrawer()">🗳️ Politics</a>
+    <a href="#news" onclick="toggleDrawer()">🎓 Education</a>
+    <a href="#news" onclick="toggleDrawer()">💼 Jobs</a>
+    <a href="#news" onclick="toggleDrawer()">🌄 Tourism</a>
+    <a href="#videos" onclick="toggleDrawer()">🎬 Videos</a>
+    <a href="#contact" onclick="toggleDrawer()">📞 Contact</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="stars layer" data-depth="0.05"></div>
+  <div class="rays"></div>
+  <div class="sun"></div>
+  <!-- Clouds -->
+  <div class="cloud layer" data-depth="0.2" style="top:18%;width:200px;height:60px;animation-duration:55s"></div>
+  <div class="cloud layer" data-depth="0.15" style="top:28%;width:140px;height:40px;animation-duration:70s;animation-delay:-20s"></div>
+  <div class="cloud layer" data-depth="0.25" style="top:12%;width:260px;height:70px;animation-duration:90s;animation-delay:-40s"></div>
+  <!-- Birds -->
+  <div class="bird" style="top:30%"><i class="fa-solid fa-dove"></i></div>
+  <div class="bird" style="top:36%;animation-delay:-10s"><i class="fa-solid fa-dove"></i></div>
+  <!-- Particles -->
+  <div class="particle" style="top:60%;left:15%"></div>
+  <div class="particle" style="top:70%;left:80%;animation-delay:-2s"></div>
+  <div class="particle" style="top:55%;left:45%;animation-delay:-4s"></div>
+
+  <!-- 3D mountains (parallax SVG layers) -->
+  <svg class="mountain layer" data-depth="0.05" viewBox="0 0 1440 500" preserveAspectRatio="none" style="height:55%;opacity:.55">
+    <path fill="#0a3b22" d="M0,400 L160,180 L300,340 L460,150 L640,360 L820,200 L1020,380 L1200,220 L1440,400 L1440,500 L0,500 Z"/>
+  </svg>
+  <svg class="mountain layer" data-depth="0.1" viewBox="0 0 1440 500" preserveAspectRatio="none" style="height:48%;opacity:.85">
+    <path fill="#0f7a35" d="M0,420 L180,240 L340,400 L520,220 L720,420 L900,260 L1100,420 L1280,300 L1440,420 L1440,500 L0,500 Z"/>
+  </svg>
+  <svg class="mountain layer" data-depth="0.18" viewBox="0 0 1440 500" preserveAspectRatio="none" style="height:42%">
+    <path fill="#064420" d="M0,460 L200,300 L380,460 L560,300 L760,470 L940,320 L1140,460 L1320,340 L1440,460 L1440,500 L0,500 Z"/>
+    <!-- snow caps -->
+    <path fill="#ffffff" opacity=".8" d="M180,310 L220,320 L260,335 L240,322 Z M540,310 L580,320 L620,332 Z M920,330 L960,338 L1000,346 Z M1300,350 L1340,358 L1370,365 Z"/>
+  </svg>
+  <div class="fog"></div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center text-white">
+    <span class="glass px-4 py-1 rounded-full text-xs tracking-widest mb-5" data-aos="fade-down">🏔️ उत्तराखंड • TEHRI GARHWAL • MANDAR</span>
+    <h1 class="text-5xl md:text-7xl font-extrabold text-gradient drop-shadow-2xl" data-aos="zoom-in">Parvat Paigaam</h1>
+    <h2 class="font-hindi text-2xl md:text-4xl mt-3 text-yellow-200" data-aos="fade-up">पर्वत पैगाम</h2>
+    <p class="mt-4 text-base md:text-xl max-w-2xl font-hindi text-green-100" data-aos="fade-up" data-aos-delay="150">उत्तराखंड की हर खबर सबसे पहले</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center" data-aos="fade-up" data-aos-delay="300">
+      <a href="#news" class="btn btn-primary ai-glow"><i class="fa-solid fa-newspaper"></i> Latest News</a>
+      <a href="#videos" class="btn btn-accent"><i class="fa-solid fa-play"></i> Watch Videos</a>
+      <button onclick="requireAdmin(()=>openEditor())" class="btn btn-ghost text-white"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Article</button>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 animate-bounce text-sm"><i class="fa-solid fa-angles-down"></i></div>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-4 mt-12">
+
+<!-- STATS -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10" data-aos="fade-up">
+  <div class="glass p-5 rounded-xl text-center"><div class="text-3xl font-extrabold count-up text-gradient" data-target="1240">0</div><div class="text-xs uppercase opacity-70 mt-1">Articles</div></div>
+  <div class="glass p-5 rounded-xl text-center"><div class="text-3xl font-extrabold count-up text-gradient" data-target="86">0</div><div class="text-xs uppercase opacity-70 mt-1">Villages Covered</div></div>
+  <div class="glass p-5 rounded-xl text-center"><div class="text-3xl font-extrabold count-up text-gradient" data-target="540000">0</div><div class="text-xs uppercase opacity-70 mt-1">Readers / Month</div></div>
+  <div class="glass p-5 rounded-xl text-center"><div class="text-3xl font-extrabold count-up text-gradient" data-target="24">0</div><div class="text-xs uppercase opacity-70 mt-1">Live Reporters</div></div>
+</section>
+
+<!-- MAIN GRID -->
+<div class="grid lg:grid-cols-[1fr_320px] gap-8">
+
+  <!-- LEFT -->
+  <div>
+    <!-- Section heading -->
+    <div class="flex items-center justify-between mb-5">
+      <h2 class="text-2xl md:text-3xl font-extrabold"><span class="text-gradient">📰 Latest News</span></h2>
+      <div class="flex gap-2 text-sm">
+        <select id="catFilter" class="glass rounded-md px-2 py-1 text-xs"></select>
+        <input id="searchInp" placeholder="Search…" class="glass rounded-md px-2 py-1 text-xs w-32"/>
+      </div>
+    </div>
+
+    <div id="news" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+
+    <!-- UTTARAKHAND CATEGORIES -->
+    <section id="uttarakhand" class="mt-14">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-6"><span class="text-gradient">🏔️ Uttarakhand Special</span></h2>
+      <div id="ukCats" class="grid sm:grid-cols-2 md:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- TEHRI BANNER -->
+    <section id="tehri" class="mt-14 relative rounded-2xl overflow-hidden p-8 text-white" style="background:linear-gradient(135deg,#064420,#0f7a35,#16a34a)">
+      <div class="absolute inset-0 opacity-30" style="background-image:radial-gradient(circle at 20% 20%, #facc15 0, transparent 40%),radial-gradient(circle at 80% 80%, #34d399 0, transparent 40%)"></div>
+      <div class="relative">
+        <h3 class="text-3xl font-extrabold">Tehri Garhwal Live</h3>
+        <p class="mt-2 font-hindi">मांदर, टिहरी गढ़वाल — हर गाँव, हर खबर, हर पल</p>
+        <button onclick="document.getElementById('news').scrollIntoView({behavior:'smooth'})" class="btn btn-accent mt-4"><i class="fa-solid fa-arrow-right"></i> Explore</button>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="mt-14">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-6"><span class="text-gradient">🎬 Video News</span></h2>
+      <div class="rounded-2xl overflow-hidden glass mb-6 aspect-video">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/b6Ll9C1U_v8" title="Parvat Paigaam Featured" allowfullscreen></iframe>
+      </div>
+      <div id="videoGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- AD -->
+    <div class="my-10 glass rounded-xl p-6 text-center text-sm opacity-80">
+      <!-- Place Google AdSense code here -->
+      <i class="fa-solid fa-rectangle-ad text-2xl mb-2"></i><br/>Advertisement — 728×90 (Place AdSense here)
+    </div>
+
+    <!-- SOCIAL -->
+    <section class="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <a target="_blank" rel="noopener" class="glass rounded-xl p-5 text-center hover:scale-105 transition" href="https://www.instagram.com/parvatpaigaam?igsh=M3EweXc2cTVqajRp"><i class="fa-brands fa-instagram text-3xl text-pink-500"></i><div class="mt-2 font-semibold">Instagram</div></a>
+      <a target="_blank" rel="noopener" class="glass rounded-xl p-5 text-center hover:scale-105 transition" href="https://youtu.be/b6Ll9C1U_v8?si=BZ29EYopa7I70sRA"><i class="fa-brands fa-youtube text-3xl text-red-600"></i><div class="mt-2 font-semibold">YouTube</div></a>
+      <a target="_blank" rel="noopener" class="glass rounded-xl p-5 text-center hover:scale-105 transition" href="https://www.facebook.com/share/1B7Q14rCmH/"><i class="fa-brands fa-facebook text-3xl text-blue-500"></i><div class="mt-2 font-semibold">Facebook</div></a>
+      <a target="_blank" rel="noopener" class="glass rounded-xl p-5 text-center hover:scale-105 transition" href="https://wa.me/918534038964"><i class="fa-brands fa-whatsapp text-3xl text-green-500"></i><div class="mt-2 font-semibold">WhatsApp</div></a>
+    </section>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="space-y-6 lg:sticky lg:top-32 self-start">
+    <!-- Weather -->
+    <div class="glass rounded-2xl p-5 ai-glow">
+      <div class="flex justify-between items-center"><h3 class="font-bold">☁️ Tehri Weather</h3><span class="text-xs opacity-70">Mandar</span></div>
+      <div class="mt-3 flex items-center gap-4">
+        <i class="fa-solid fa-cloud-sun text-5xl text-yellow-400"></i>
+        <div><div class="text-4xl font-extrabold">22°C</div><div class="text-xs opacity-70">Partly Cloudy</div></div>
+      </div>
+      <div class="grid grid-cols-3 gap-2 mt-4 text-center text-xs">
+        <div class="glass rounded-lg p-2"><i class="fa-solid fa-droplet text-sky-400"></i><div>68%</div></div>
+        <div class="glass rounded-lg p-2"><i class="fa-solid fa-wind text-emerald-400"></i><div>12 km/h</div></div>
+        <div class="glass rounded-lg p-2"><i class="fa-solid fa-temperature-half text-orange-400"></i><div>26°</div></div>
+      </div>
+    </div>
+
+    <!-- Trending -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-bold mb-3">🔥 Trending Now</h3>
+      <ul id="trendList" class="space-y-3 text-sm"></ul>
+    </div>
+
+    <!-- Hashtags -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-bold mb-3"># Popular Tags</h3>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <span class="badge bg-brand text-white">#Uttarakhand</span>
+        <span class="badge bg-yellow-400 text-brand-dark">#Tehri</span>
+        <span class="badge bg-emerald-500 text-white">#Garhwal</span>
+        <span class="badge bg-sky-500 text-white">#Mandar</span>
+        <span class="badge bg-rose-500 text-white">#Politics</span>
+        <span class="badge bg-purple-500 text-white">#Jobs</span>
+      </div>
+    </div>
+
+    <!-- Sidebar Ad -->
+    <div class="glass rounded-2xl p-5 text-center text-xs opacity-80">
+      <!-- Place Google AdSense code here -->
+      <i class="fa-solid fa-rectangle-ad text-xl"></i><div class="mt-2">Sidebar AD 300×250</div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-bold">📧 Newsletter</h3>
+      <p class="text-xs opacity-70 mt-1">रोज़ की खबरें सीधे आपके इनबॉक्स में</p>
+      <form onsubmit="event.preventDefault();alert('Subscribed!')" class="mt-3 flex gap-2">
+        <input type="email" required placeholder="you@email.com" class="flex-1 px-3 py-2 rounded-md text-sm bg-white/80 text-black"/>
+        <button class="btn btn-primary text-sm">Join</button>
+      </form>
+    </div>
+  </aside>
+</div>
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="mt-20 relative text-white" style="background:linear-gradient(180deg,#064420,#031b10)">
+  <svg viewBox="0 0 1440 120" class="w-full block" preserveAspectRatio="none" style="height:80px">
+    <path fill="#0f7a35" d="M0,80 L160,30 L320,70 L500,20 L700,80 L900,30 L1100,75 L1300,25 L1440,70 L1440,120 L0,120 Z"/>
+  </svg>
+  <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-4 gap-8">
+    <div>
+      <div class="flex items-center gap-2 mb-3"><i class="fa-solid fa-mountain-sun text-yellow-300 text-2xl"></i><span class="font-extrabold text-xl text-gradient">Parvat Paigaam</span></div>
+      <p class="text-sm opacity-80 font-hindi">पर्वत पैगाम — उत्तराखंड की आवाज़. Tehri Garhwal, Mandar से प्रकाशित एक भरोसेमंद हिंदी डिजिटल न्यूज़ पोर्टल।</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3">Quick Links</h4>
+      <ul class="text-sm space-y-2 opacity-90">
+        <li><a href="#home">Home</a></li><li><a href="#news">News</a></li>
+        <li><a href="#videos">Videos</a></li><li><a href="#tehri">Tehri Garhwal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3">Contact</h4>
+      <ul class="text-sm space-y-2 opacity-90">
+        <li><i class="fa-solid fa-user mr-2"></i>Gaurav Rawat</li>
+        <li><i class="fa-solid fa-envelope mr-2"></i>parvatpaigaam@gmail.com</li>
+        <li><i class="fa-solid fa-phone mr-2"></i>+91 85340 38964</li>
+        <li><i class="fa-solid fa-location-dot mr-2"></i>Mandar, Tehri Garhwal, UK</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3">Follow Us</h4>
+      <div class="flex gap-3 text-xl">
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/share/1B7Q14rCmH/" class="hover:text-yellow-300"><i class="fa-brands fa-facebook"></i></a>
+        <a target="_blank" rel="noopener" href="https://www.instagram.com/parvatpaigaam?igsh=M3EweXc2cTVqajRp" class="hover:text-yellow-300"><i class="fa-brands fa-instagram"></i></a>
+        <a target="_blank" rel="noopener" href="https://youtu.be/b6Ll9C1U_v8?si=BZ29EYopa7I70sRA" class="hover:text-yellow-300"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <form onsubmit="event.preventDefault();alert('Thank you!')" class="mt-4 flex gap-2">
+        <input type="email" required placeholder="Email" class="flex-1 text-sm px-3 py-2 rounded-md text-black"/>
+        <button class="btn btn-accent text-sm">Go</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-t border-white/10 text-center text-xs py-4 opacity-80">© 2026 Parvat Paigaam | All Rights Reserved • Designed for Gaurav Rawat</div>
+</footer>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mob-nav lg:hidden fixed bottom-0 inset-x-0 z-50 glass border-t border-white/20 grid grid-cols-5 py-2">
+  <a href="#home"><i class="fa-solid fa-house text-lg"></i>Home</a>
+  <a href="#news"><i class="fa-solid fa-newspaper text-lg"></i>News</a>
+  <a href="#videos"><i class="fa-solid fa-play text-lg"></i>Videos</a>
+  <a href="#tehri"><i class="fa-solid fa-mountain text-lg"></i>Tehri</a>
+  <a href="#contact"><i class="fa-solid fa-phone text-lg"></i>Contact</a>
+</nav>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/918534038964" target="_blank" class="float-btn bg-green-500 text-white w-14 h-14" style="bottom:90px;right:18px"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="float-btn bg-brand text-white w-12 h-12" style="bottom:160px;right:20px"><i class="fa-solid fa-arrow-up"></i></button>
+<button onclick="openLogin()" class="float-btn bg-yellow-400 text-brand-dark w-12 h-12 ai-glow" style="bottom:225px;right:20px" title="Admin"><i class="fa-solid fa-user-shield"></i></button>
+
+<!-- ============= MODALS ============= -->
+
+<!-- SEARCH -->
+<div id="searchModal" class="modal">
+  <div class="modal-box p-6 max-w-xl">
+    <div class="flex justify-between items-center mb-4"><h3 class="font-bold text-xl">🔎 Search</h3><button onclick="closeModal('searchModal')"><i class="fa-solid fa-xmark"></i></button></div>
+    <input id="searchPopupInp" oninput="searchPopup(this.value)" placeholder="Type to search news…" class="w-full border rounded-lg px-4 py-3 text-black"/>
+    <div id="searchResults" class="mt-4 max-h-72 overflow-auto space-y-2"></div>
+  </div>
+</div>
+
+<!-- SETTINGS PIN -->
+<div id="pinModal" class="modal">
+  <div class="modal-box p-6 max-w-sm text-center">
+    <i class="fa-solid fa-lock text-4xl text-brand"></i>
+    <h3 class="font-bold text-xl mt-3">Settings Locked</h3>
+    <p class="text-sm opacity-70 mt-1">Enter 4-digit PIN to continue</p>
+    <input id="pinInput" type="password" maxlength="4" class="mt-4 w-full text-center text-2xl tracking-[1rem] border rounded-lg py-3 text-black"/>
+    <div class="flex gap-2 mt-4">
+      <button class="btn btn-ghost flex-1" onclick="closeModal('pinModal')">Cancel</button>
+      <button class="btn btn-primary flex-1" onclick="verifyPin()">Unlock</button>
+    </div>
+    <p class="text-xs opacity-60 mt-3">Demo PIN: <b>2026</b></p>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div id="settingsModal" class="modal">
+  <div class="modal-box p-6 max-w-md">
+    <div class="flex justify-between items-center mb-4"><h3 class="font-bold text-xl">⚙️ Settings</h3><button onclick="closeModal('settingsModal')"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="space-y-4 text-sm">
+      <label class="flex items-center justify-between"><span>Dark Mode</span><input id="setDark" type="checkbox" onchange="toggleDark()"/></label>
+      <label class="flex items-center justify-between"><span>Notifications</span><input id="setNotif" type="checkbox" checked/></label>
+      <label class="flex items-center justify-between"><span>Animations</span><input id="setAnim" type="checkbox" checked onchange="toggleAnim(this.checked)"/></label>
+      <div>
+        <label class="block mb-1">Language</label>
+        <select id="setLang" class="w-full border rounded-md px-2 py-2 text-black" onchange="setLang(this.value)">
+          <option value="hi">हिंदी</option><option value="en">English</option><option value="te">తెలుగు</option><option value="pa">ਪੰਜਾਬੀ</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">Font Size: <span id="fsLabel">16</span>px</label>
+        <input id="setFs" type="range" min="12" max="22" value="16" oninput="setFs(this.value)" class="w-full"/>
+      </div>
+      <button class="btn btn-primary w-full" onclick="resetPrefs()"><i class="fa-solid fa-rotate"></i> Reset Preferences</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div id="loginModal" class="modal">
+  <div class="modal-box p-6 max-w-sm">
+    <div class="flex justify-between items-center mb-4"><h3 class="font-bold text-xl">🛡️ Admin Login</h3><button onclick="closeModal('loginModal')"><i class="fa-solid fa-xmark"></i></button></div>
+    <input id="logUser" placeholder="Username" class="w-full border rounded-md px-3 py-2 mb-3 text-black"/>
+    <input id="logPass" type="password" placeholder="Password" class="w-full border rounded-md px-3 py-2 mb-3 text-black"/>
+    <button class="btn btn-primary w-full" onclick="doLogin()"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+    <p class="text-xs opacity-60 mt-3 text-center">Demo: <b>admin</b> / <b>parvat@2026</b></p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashModal" class="modal">
+  <div class="modal-box max-w-6xl">
+    <div class="grid md:grid-cols-[220px_1fr]">
+      <aside class="bg-brand-dark text-white p-5 md:rounded-l-2xl">
+        <div class="flex items-center gap-2 mb-6"><i class="fa-solid fa-mountain-sun text-yellow-300"></i><span class="font-bold">Admin Panel</span></div>
+        <nav class="space-y-2 text-sm">
+          <button class="w-full text-left px-3 py-2 rounded bg-white/10"><i class="fa-solid fa-gauge mr-2"></i>Dashboard</button>
+          <button class="w-full text-left px-3 py-2 rounded hover:bg-white/10" onclick="openEditor()"><i class="fa-solid fa-plus mr-2"></i>New Post</button>
+          <button class="w-full text-left px-3 py-2 rounded hover:bg-white/10" onclick="logout()"><i class="fa-solid fa-right-from-bracket mr-2"></i>Logout</button>
+        </nav>
+      </aside>
+      <div class="p-6 max-h-[88vh] overflow-auto">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-extrabold text-2xl text-gradient">Dashboard</h3>
+          <button onclick="closeModal('dashModal')"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+          <div class="glass rounded-xl p-4"><div class="text-xs opacity-70">Total Posts</div><div id="stTotal" class="text-2xl font-bold">0</div></div>
+          <div class="glass rounded-xl p-4"><div class="text-xs opacity-70">Trending</div><div id="stTrend" class="text-2xl font-bold">0</div></div>
+          <div class="glass rounded-xl p-4"><div class="text-xs opacity-70">Featured</div><div id="stFeat" class="text-2xl font-bold">0</div></div>
+          <div class="glass rounded-xl p-4"><div class="text-xs opacity-70">Drafts</div><div id="stDraft" class="text-2xl font-bold">0</div></div>
+        </div>
+        <div class="flex gap-2 mb-4">
+          <input id="dashSearch" oninput="renderDashTable()" placeholder="Search posts…" class="flex-1 border rounded-md px-3 py-2 text-black"/>
+          <button class="btn btn-primary" onclick="openEditor()"><i class="fa-solid fa-plus"></i> New</button>
+        </div>
+        <div class="overflow-auto">
+          <table class="w-full text-sm">
+            <thead class="text-left bg-brand/10"><tr><th class="p-2">Title</th><th>Category</th><th>Date</th><th>Status</th><th></th></tr></thead>
+            <tbody id="dashTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDITOR -->
+<div id="editorModal" class="modal">
+  <div class="modal-box p-6 max-w-3xl">
+    <div class="flex justify-between items-center mb-4"><h3 class="font-bold text-xl"><i class="fa-solid fa-feather"></i> Article Editor</h3><button onclick="closeModal('editorModal')"><i class="fa-solid fa-xmark"></i></button></div>
+    <input type="hidden" id="edId"/>
+    <div class="grid md:grid-cols-2 gap-3">
+      <input id="edTitle" placeholder="Article Title" class="border rounded-md px-3 py-2 md:col-span-2 text-black"/>
+      <select id="edCat" class="border rounded-md px-3 py-2 text-black"></select>
+      <input id="edDate" type="date" class="border rounded-md px-3 py-2 text-black"/>
+      <input id="edThumb" placeholder="Thumbnail URL" class="border rounded-md px-3 py-2 md:col-span-2 text-black"/>
+      <input id="edTags" placeholder="Tags (comma separated)" class="border rounded-md px-3 py-2 md:col-span-2 text-black"/>
+      <textarea id="edBody" rows="7" placeholder="Write article content…" class="border rounded-md px-3 py-2 md:col-span-2 text-black"></textarea>
+      <label class="flex items-center gap-2"><input id="edFeat" type="checkbox"/> Featured</label>
+      <label class="flex items-center gap-2"><input id="edTrend" type="checkbox"/> Trending</label>
+    </div>
+    <div class="flex flex-wrap gap-2 mt-4">
+      <button class="btn btn-ghost" onclick="savePost('draft')"><i class="fa-solid fa-floppy-disk"></i> Save Draft</button>
+      <button class="btn btn-accent" onclick="previewPost()"><i class="fa-solid fa-eye"></i> Preview</button>
+      <button class="btn btn-primary" onclick="savePost('published')"><i class="fa-solid fa-rocket"></i> Publish</button>
+      <button class="btn bg-red-600 text-white ml-auto" onclick="deleteCurrent()"><i class="fa-solid fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE VIEW -->
+<div id="viewModal" class="modal">
+  <div class="modal-box p-6 max-w-3xl">
+    <div class="flex justify-between items-center mb-3"><h3 id="vTitle" class="font-bold text-2xl"></h3><button onclick="closeModal('viewModal')"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="vMeta" class="text-xs opacity-70 mb-3"></div>
+    <img id="vImg" class="rounded-lg w-full mb-4"/>
+    <div id="vBody" class="leading-relaxed whitespace-pre-wrap"></div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+/* ============== CONFIG ============== */
+const CATEGORIES = ["Politics","Education","Tourism","Village News","Jobs","Weather","Technology","Government Schemes"];
+const ADMIN_PIN = "2026";
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "parvat@2026";
+
+const I18N = {
+  hi:{brand:"पर्वत पैगाम",nav_home:"होम",nav_uk:"उत्तराखंड",nav_tehri:"टिहरी गढ़वाल",nav_politics:"राजनीति",nav_edu:"शिक्षा",nav_jobs:"नौकरी",nav_tour:"पर्यटन",nav_videos:"वीडियो",nav_contact:"संपर्क"},
+  en:{brand:"Parvat Paigaam",nav_home:"Home",nav_uk:"Uttarakhand",nav_tehri:"Tehri Garhwal",nav_politics:"Politics",nav_edu:"Education",nav_jobs:"Jobs",nav_tour:"Tourism",nav_videos:"Videos",nav_contact:"Contact"},
+  te:{brand:"పర్వత్ పైగామ్",nav_home:"హోమ్",nav_uk:"ఉత్తరాఖండ్",nav_tehri:"తెహ్రి గర్వాల్",nav_politics:"రాజకీయాలు",nav_edu:"విద్య",nav_jobs:"ఉద్యోగాలు",nav_tour:"పర్యాటకం",nav_videos:"వీడియోలు",nav_contact:"సంప్రదించండి"},
+  pa:{brand:"ਪਰਵਤ ਪੈਗਾਮ",nav_home:"ਹੋਮ",nav_uk:"ਉੱਤਰਾਖੰਡ",nav_tehri:"ਤੇਹਰੀ ਗੜ੍ਹਵਾਲ",nav_politics:"ਰਾਜਨੀਤੀ",nav_edu:"ਸਿੱਖਿਆ",nav_jobs:"ਨੌਕਰੀ",nav_tour:"ਸੈਰ-ਸਪਾਟਾ",nav_videos:"ਵੀਡੀਓ",nav_contact:"ਸੰਪਰਕ"}
+};
+
+const DEFAULT_POSTS = [
+  {id:1,title:"टिहरी झील पर पर्यटकों की भारी भीड़, बूस्ट मिला स्थानीय व्यापार को",cat:"Tourism",thumb:"https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",desc:"टिहरी डैम और झील पर पर्यटन ने तोड़े रिकॉर्ड…",body:"टिहरी झील पर इस वर्ष पर्यटकों की संख्या में 40% बढ़ोतरी दर्ज की गई है। स्थानीय होटल, बोटिंग और टैक्सी व्यवसाय में जबरदस्त उछाल आया है।",date:"2026-05-20",feat:true,trend:true,status:"published",tags:["Tehri","Tourism"]},
+  {id:2,title:"उत्तराखंड में मौसम विभाग का ऑरेंज अलर्ट",cat:"Weather",thumb:"https://images.unsplash.com/photo-1561553873-e8491a564fd0?w=800",desc:"अगले 48 घंटे भारी बारिश की संभावना…",body:"मौसम विभाग ने उत्तराखंड के पर्वतीय जिलों में अगले 48 घंटे भारी बारिश का अलर्ट जारी किया है। प्रशासन सतर्क।",date:"2026-05-21",feat:false,trend:true,status:"published",tags:["Weather"]},
+  {id:3,title:"मांदर ब्लॉक में नए स्कूल भवन का शिलान्यास",cat:"Education",thumb:"https://images.unsplash.com/photo-1497486751825-1233686f5d54?w=800",desc:"शिक्षा के क्षेत्र में बड़ी पहल…",body:"मांदर, टिहरी गढ़वाल में आधुनिक स्कूल भवन का शिलान्यास किया गया। 600 बच्चों को लाभ मिलेगा।",date:"2026-05-18",feat:true,trend:false,status:"published",tags:["Mandar","Education"]},
+  {id:4,title:"उत्तराखंड पुलिस भर्ती 2026 — आवेदन शुरू",cat:"Jobs",thumb:"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800",desc:"1500 पदों पर भर्ती की अधिसूचना जारी…",body:"उत्तराखंड पुलिस ने 1500 पदों के लिए ऑनलाइन आवेदन शुरू किए हैं। अंतिम तिथि 30 जून।",date:"2026-05-19",feat:false,trend:true,status:"published",tags:["Jobs"]},
+  {id:5,title:"गढ़वाल क्षेत्र में नई सड़क परियोजना शुरू",cat:"Government Schemes",thumb:"https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800",desc:"पहाड़ों को जोड़ेगी नई सड़कें…",body:"पीएमजीएसवाई के तहत गढ़वाल में 220 किमी नई सड़कों का निर्माण शुरू हो गया है।",date:"2026-05-17",feat:false,trend:false,status:"published",tags:["Garhwal","Roads"]},
+  {id:6,title:"देहरादून में डिजिटल इंडिया सम्मेलन सम्पन्न",cat:"Technology",thumb:"https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",desc:"स्टार्टअप्स को मिला बड़ा मंच…",body:"देहरादून में आयोजित डिजिटल इंडिया सम्मेलन में 200+ स्टार्टअप्स ने हिस्सा लिया।",date:"2026-05-15",feat:false,trend:false,status:"published",tags:["Tech"]},
+  {id:7,title:"राजनीतिक हलचल: विधानसभा में हुई गरमागरम बहस",cat:"Politics",thumb:"https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800",desc:"विपक्ष ने उठाए कई मुद्दे…",body:"उत्तराखंड विधानसभा सत्र में विपक्ष ने स्वास्थ्य और रोजगार के मुद्दों पर सरकार को घेरा।",date:"2026-05-16",feat:false,trend:true,status:"published",tags:["Politics"]},
+  {id:8,title:"गाँव की कहानी: मांदर के एक किसान की प्रेरक यात्रा",cat:"Village News",thumb:"https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",desc:"जैविक खेती से कमाए लाखों…",body:"मांदर के किसान रमेश सिंह ने जैविक खेती अपनाकर सालाना ₹15 लाख की आमदनी की।",date:"2026-05-14",feat:true,trend:false,status:"published",tags:["Mandar","Farming"]},
+  {id:9,title:"चार धाम यात्रा शुरू, श्रद्धालुओं का उत्साह चरम पर",cat:"Tourism",thumb:"https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=800",desc:"पहले ही दिन 50,000 श्रद्धालु पहुंचे…",body:"उत्तराखंड की चार धाम यात्रा 2026 का शुभारंभ हो गया है। पहले दिन 50,000+ श्रद्धालुओं ने दर्शन किए।",date:"2026-05-12",feat:true,trend:true,status:"published",tags:["Char Dham"]},
+  {id:10,title:"पहाड़ी क्षेत्रों में बिजली आपूर्ति को मिला बड़ा बूस्ट",cat:"Government Schemes",thumb:"https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800",desc:"100 गाँवों में पहुंची 24x7 बिजली…",body:"उत्तराखंड के दुर्गम क्षेत्रों के 100 गाँवों में 24x7 बिजली सुनिश्चित की गई है।",date:"2026-05-11",feat:false,trend:false,status:"published",tags:["Energy"]},
+  {id:11,title:"शिक्षा बजट में 18% की बढ़ोतरी की घोषणा",cat:"Education",thumb:"https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800",desc:"नए स्कूलों और कॉलेजों को लाभ…",body:"राज्य सरकार ने शिक्षा बजट में 18% बढ़ोतरी की घोषणा की है, जिससे ग्रामीण क्षेत्रों में नए संस्थान खुलेंगे।",date:"2026-05-10",feat:false,trend:false,status:"published",tags:["Edu"]},
+  {id:12,title:"AI टेक्नोलॉजी से होगी पर्वतीय कृषि की निगरानी",cat:"Technology",thumb:"https://images.unsplash.com/photo-1506765515384-028b60a970df?w=800",desc:"ड्रोन और AI का होगा उपयोग…",body:"उत्तराखंड सरकार और एक टेक स्टार्टअप ने पर्वतीय कृषि की AI निगरानी के लिए MoU साइन किया।",date:"2026-05-09",feat:false,trend:true,status:"published",tags:["AI","Farming"]}
+];
+
+/* ============== STATE ============== */
+const LS = {
+  posts:"pp_posts", lang:"pp_lang", dark:"pp_dark", fs:"pp_fs", anim:"pp_anim", admin:"pp_admin", pinOk:"pp_pin"
+};
+let posts = JSON.parse(localStorage.getItem(LS.posts)||"null") || DEFAULT_POSTS;
+const savePosts=()=>localStorage.setItem(LS.posts,JSON.stringify(posts));
+
+/* ============== INIT ============== */
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.getElementById('loader').classList.add('hide'),900);
+  AOS.init({duration:800,once:true});
+  // restore prefs
+  if(localStorage.getItem(LS.dark)==="1"){document.body.classList.add('dark');document.getElementById('darkIcon').className="fa-solid fa-sun"}
+  setLang(localStorage.getItem(LS.lang)||"hi",true);
+  const fs=localStorage.getItem(LS.fs); if(fs) setFs(fs);
+  // populate selects
+  const cf=document.getElementById('catFilter'); cf.innerHTML='<option value="">All Categories</option>'+CATEGORIES.map(c=>`<option>${c}</option>`).join('');
+  document.getElementById('edCat').innerHTML=CATEGORIES.map(c=>`<option>${c}</option>`).join('');
+  cf.onchange=renderPosts; document.getElementById('searchInp').oninput=renderPosts;
+  renderPosts(); renderTrending(); renderUkCats(); renderVideos();
+  countUp();
+  // parallax
+  document.addEventListener('mousemove',e=>{
+    const x=(e.clientX/innerWidth-.5), y=(e.clientY/innerHeight-.5);
+    document.querySelectorAll('.layer').forEach(el=>{
+      const d=parseFloat(el.dataset.depth||0.1);
+      el.style.transform=`translate(${x*d*50}px, ${y*d*30}px)`;
+    });
+  });
+  // sticky header tone
+  window.addEventListener('scroll',()=>{
+    document.getElementById('header').classList.toggle('shadow-2xl', scrollY>30);
+  });
+});
+
+/* ============== UI HELPERS ============== */
+const openModal=id=>document.getElementById(id).classList.add('show');
+const closeModal=id=>document.getElementById(id).classList.remove('show');
+function toggleDrawer(){document.getElementById('drawer').classList.toggle('translate-x-full')}
+function openSearch(){openModal('searchModal');setTimeout(()=>document.getElementById('searchPopupInp').focus(),100)}
+function toggleDark(){
+  document.body.classList.toggle('dark');
+  const d=document.body.classList.contains('dark');
+  localStorage.setItem(LS.dark,d?"1":"0");
+  document.getElementById('darkIcon').className=d?"fa-solid fa-sun":"fa-solid fa-moon";
+  const s=document.getElementById('setDark'); if(s) s.checked=d;
+}
+function setFs(v){document.documentElement.style.fontSize=v+"px";const l=document.getElementById('fsLabel');if(l)l.textContent=v;localStorage.setItem(LS.fs,v)}
+function toggleAnim(on){document.body.style.setProperty('--a',on?'1':'0'); if(!on){document.querySelectorAll('.particle,.cloud,.bird,.rays').forEach(e=>e.style.animation='none')}}
+function resetPrefs(){localStorage.clear();location.reload()}
+function setLang(code,silent){
+  const dict=I18N[code]||I18N.hi;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(dict[k]) el.textContent=dict[k]});
+  document.getElementById('langSel').value=code;
+  const s=document.getElementById('setLang'); if(s) s.value=code;
+  localStorage.setItem(LS.lang,code);
+}
+document.getElementById('langSel').addEventListener('change',e=>setLang(e.target.value));
+
+/* ============== SETTINGS PIN ============== */
+function openSettings(){
+  if(sessionStorage.getItem(LS.pinOk)==="1"){openModal('settingsModal');return}
+  openModal('pinModal');
+  setTimeout(()=>document.getElementById('pinInput').focus(),100);
+}
+function verifyPin(){
+  if(document.getElementById('pinInput').value===ADMIN_PIN){
+    sessionStorage.setItem(LS.pinOk,"1");closeModal('pinModal');openModal('settingsModal');
+  }else alert("Wrong PIN!");
+}
+
+/* ============== ADMIN ============== */
+function openLogin(){
+  if(localStorage.getItem(LS.admin)==="1"){openDash();return}
+  openModal('loginModal');
+}
+function doLogin(){
+  if(document.getElementById('logUser').value===ADMIN_USER && document.getElementById('logPass').value===ADMIN_PASS){
+    localStorage.setItem(LS.admin,"1");closeModal('loginModal');openDash();
+  }else alert("Invalid credentials");
+}
+function logout(){localStorage.removeItem(LS.admin);closeModal('dashModal');alert("Logged out")}
+function requireAdmin(cb){if(localStorage.getItem(LS.admin)==="1")cb();else openLogin()}
+function openDash(){renderDashTable();openModal('dashModal')}
+
+function renderDashTable(){
+  const q=(document.getElementById('dashSearch')?.value||"").toLowerCase();
+  const list=posts.filter(p=>p.title.toLowerCase().includes(q));
+  document.getElementById('stTotal').textContent=posts.length;
+  document.getElementById('stTrend').textContent=posts.filter(p=>p.trend).length;
+  document.getElementById('stFeat').textContent=posts.filter(p=>p.feat).length;
+  document.getElementById('stDraft').textContent=posts.filter(p=>p.status==='draft').length;
+  document.getElementById('dashTable').innerHTML = list.map(p=>`
+    <tr class="border-b border-white/10">
+      <td class="p-2 font-semibold">${p.title}</td>
+      <td>${p.cat}</td><td>${p.date}</td>
+      <td><span class="badge ${p.status==='published'?'bg-green-500 text-white':'bg-yellow-400 text-black'}">${p.status}</span></td>
+      <td class="flex gap-2 p-2">
+        <button onclick="openEditor(${p.id})" class="text-sky-500"><i class="fa-solid fa-pen"></i></button>
+        <button onclick="deletePost(${p.id})" class="text-red-500"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    </tr>`).join('');
+}
+
+/* ============== EDITOR ============== */
+function openEditor(id){
+  requireAdmin(()=>{
+    const p = id ? posts.find(x=>x.id===id) : null;
+    document.getElementById('edId').value=p?p.id:"";
+    document.getElementById('edTitle').value=p?p.title:"";
+    document.getElementById('edCat').value=p?p.cat:CATEGORIES[0];
+    document.getElementById('edDate').value=p?p.date:new Date().toISOString().slice(0,10);
+    document.getElementById('edThumb').value=p?p.thumb:"";
+    document.getElementById('edTags').value=p?(p.tags||[]).join(", "):"";
+    document.getElementById('edBody').value=p?p.body:"";
+    document.getElementById('edFeat').checked=p?!!p.feat:false;
+    document.getElementById('edTrend').checked=p?!!p.trend:false;
+    openModal('editorModal');
+  });
+}
+function savePost(status){
+  const id=parseInt(document.getElementById('edId').value)||Date.now();
+  const title=document.getElementById('edTitle').value.trim();
+  if(!title){alert("Title required");return}
+  const body=document.getElementById('edBody').value.trim();
+  const data={
+    id,title,cat:document.getElementById('edCat').value,
+    date:document.getElementById('edDate').value||new Date().toISOString().slice(0,10),
+    thumb:document.getElementById('edThumb').value||"https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+    desc:body.slice(0,120)+(body.length>120?"…":""),
+    body, tags:document.getElementById('edTags').value.split(',').map(s=>s.trim()).filter(Boolean),
+    feat:document.getElementById('edFeat').checked, trend:document.getElementById('edTrend').checked, status
+  };
+  const i=posts.findIndex(p=>p.id===id);
+  if(i>-1) posts[i]=data; else posts.unshift(data);
+  savePosts(); renderPosts(); renderTrending(); renderDashTable();
+  closeModal('editorModal');
+  alert(status==='published'?"Published live!":"Draft saved");
+}
+function previewPost(){
+  viewArticle({
+    title:document.getElementById('edTitle').value,
+    date:document.getElementById('edDate').value,
+    cat:document.getElementById('edCat').value,
+    thumb:document.getElementById('edThumb').value,
+    body:document.getElementById('edBody').value
+  });
+}
+function deleteCurrent(){const id=parseInt(document.getElementById('edId').value); if(id) deletePost(id); closeModal('editorModal')}
+function deletePost(id){
+  if(!confirm("Delete this article?"))return;
+  posts=posts.filter(p=>p.id!==id); savePosts(); renderPosts(); renderTrending(); renderDashTable();
+}
+
+/* ============== RENDER ============== */
+function renderPosts(){
+  const cat=document.getElementById('catFilter').value;
+  const q=(document.getElementById('searchInp').value||"").toLowerCase();
+  const list=posts.filter(p=>p.status==='published' && (!cat||p.cat===cat) && (p.title.toLowerCase().includes(q)||(p.desc||"").toLowerCase().includes(q)));
+  document.getElementById('news').innerHTML = list.map(p=>`
+    <article class="news-card glass rounded-2xl overflow-hidden" data-aos="fade-up">
+      <div class="relative overflow-hidden h-44">
+        <img loading="lazy" src="${p.thumb}" alt="${p.title}" class="w-full h-full object-cover"/>
+        <span class="badge absolute top-3 left-3 bg-brand text-white">${p.cat}</span>
+        ${p.trend?'<span class="badge absolute top-3 right-3 bg-red-500 text-white">🔥 Trending</span>':''}
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg leading-snug font-hindi">${p.title}</h3>
+        <p class="text-sm opacity-75 mt-2">${p.desc||""}</p>
+        <div class="flex items-center justify-between mt-4 text-xs opacity-70">
+          <span><i class="fa-regular fa-calendar"></i> ${p.date}</span>
+          <div class="flex gap-2">
+            <button onclick='viewArticle(${JSON.stringify(p).replace(/'/g,"&#39;")})' class="text-brand font-semibold"><i class="fa-solid fa-book-open"></i> Read</button>
+            <button class="hover:text-yellow-500"><i class="fa-regular fa-bookmark"></i></button>
+            <button onclick="navigator.share?navigator.share({title:'${p.title.replace(/'/g,'')}'}):alert('Share!')"><i class="fa-solid fa-share-nodes"></i></button>
+          </div>
+        </div>
+      </div>
+    </article>`).join('') || `<div class="col-span-full text-center opacity-60 py-10">No articles found.</div>`;
+}
+function renderTrending(){
+  const t=posts.filter(p=>p.trend && p.status==='published').slice(0,5);
+  document.getElementById('trendList').innerHTML = t.map((p,i)=>`
+    <li class="flex gap-3 cursor-pointer hover:opacity-80" onclick='viewArticle(${JSON.stringify(p).replace(/'/g,"&#39;")})'>
+      <span class="text-2xl font-extrabold text-gradient w-6">${i+1}</span>
+      <div><div class="font-semibold leading-snug font-hindi">${p.title}</div><div class="text-xs opacity-60">${p.cat} • ${p.date}</div></div>
+    </li>`).join('')||"<li class='opacity-60 text-xs'>No trending posts</li>";
+}
+function renderUkCats(){
+  const cats=[
+    {n:"Tehri Garhwal",i:"fa-mountain",c:"from-green-600 to-emerald-800"},
+    {n:"Weather",i:"fa-cloud-sun-rain",c:"from-sky-500 to-blue-800"},
+    {n:"Tourism",i:"fa-umbrella-beach",c:"from-yellow-500 to-orange-700"},
+    {n:"Village Stories",i:"fa-tractor",c:"from-lime-500 to-green-800"},
+    {n:"Govt Schemes",i:"fa-landmark",c:"from-rose-500 to-pink-700"},
+    {n:"Roads & Dev.",i:"fa-road",c:"from-purple-500 to-indigo-800"}
+  ];
+  document.getElementById('ukCats').innerHTML=cats.map(c=>`
+    <div data-aos="zoom-in" class="rounded-2xl p-6 text-white bg-gradient-to-br ${c.c} hover:scale-105 transition cursor-pointer relative overflow-hidden">
+      <i class="fa-solid ${c.i} text-4xl mb-3"></i>
+      <h4 class="font-bold text-xl">${c.n}</h4>
+      <div class="text-xs opacity-80 mt-1">${Math.floor(Math.random()*200+50)} खबरें</div>
+      <div class="absolute -right-4 -bottom-4 text-7xl opacity-10"><i class="fa-solid ${c.i}"></i></div>
+    </div>`).join('');
+}
+function renderVideos(){
+  const vids=[
+    "https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=600",
+    "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=600",
+    "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600",
+    "https://images.unsplash.com/photo-1503602642458-232111445657?w=600",
+    "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600",
+    "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=600"
+  ];
+  document.getElementById('videoGrid').innerHTML=vids.map((v,i)=>`
+    <div class="news-card glass rounded-xl overflow-hidden cursor-pointer relative" data-aos="fade-up">
+      <div class="relative h-40 overflow-hidden">
+        <img src="${v}" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 grid place-items-center bg-black/30">
+          <div class="w-14 h-14 rounded-full bg-red-600 grid place-items-center text-white text-xl"><i class="fa-solid fa-play"></i></div>
+        </div>
+      </div>
+      <div class="p-3"><div class="font-semibold text-sm font-hindi">उत्तराखंड हाइलाइट #${i+1}</div><div class="text-xs opacity-60">5:${20+i} • 12K views</div></div>
+    </div>`).join('');
+}
+function viewArticle(p){
+  document.getElementById('vTitle').textContent=p.title;
+  document.getElementById('vMeta').innerHTML=`<span class="badge bg-brand text-white">${p.cat}</span> • ${p.date}`;
+  document.getElementById('vImg').src=p.thumb||"";
+  document.getElementById('vBody').textContent=p.body||"";
+  openModal('viewModal');
+}
+function searchPopup(q){
+  q=q.toLowerCase();
+  const list=posts.filter(p=>p.title.toLowerCase().includes(q)||((p.body||"").toLowerCase().includes(q))).slice(0,8);
+  document.getElementById('searchResults').innerHTML=list.map(p=>`
+    <div class="p-3 rounded-lg glass cursor-pointer" onclick='closeModal("searchModal");viewArticle(${JSON.stringify(p).replace(/'/g,"&#39;")})'>
+      <div class="font-semibold text-sm">${p.title}</div><div class="text-xs opacity-60">${p.cat} • ${p.date}</div>
+    </div>`).join('') || '<div class="opacity-60 text-sm text-center py-4">No results</div>';
+}
+function countUp(){
+  document.querySelectorAll('.count-up').forEach(el=>{
+    const t=+el.dataset.target; let c=0; const step=Math.max(1,Math.floor(t/60));
+    const iv=setInterval(()=>{c+=step;if(c>=t){c=t;clearInterval(iv)} el.textContent=c.toLocaleString()},25);
+  });
+}
+
+/* ============== PRODUCTION BACKEND NOTE ==============
+For production replace demo auth & CMS with:
+ 1. Firebase Authentication + Firestore  (easiest, scalable, beginner friendly)
+ 2. Supabase Auth + PostgreSQL           (modern open-source alternative)
+ 3. Node.js + MongoDB                    (best for full control)
+ 4. Appwrite Backend                     (easy self-hosted backend)
+ 5. Clerk Authentication                 (best for modern authentication UI)
+For real production deployment connect frontend with secure backend and database.
+=========================================================== */
+</script>
+</body>
+</html>
